@@ -21,7 +21,7 @@ An interactive **Streamlit application** is also built to allow real-time predic
 
 git clone https://github.com/ChirayuSolanki/SMS-classification.git
 
-cd sms-delivery-prediction
+cd SMS-classification
 
 
 ### 🔹 Step 2: Install Dependencies
