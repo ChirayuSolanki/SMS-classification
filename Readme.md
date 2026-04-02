@@ -19,14 +19,17 @@ An interactive **Streamlit application** is also built to allow real-time predic
 ### 🔹 Step 1: Clone the Repository
 
 
-git clone <your-repo-link>
-cd sms-delivery-prediction
+git clone https://github.com/ChirayuSolanki/SMS-classification.git
+
+cd SMS-classification
 
 
 ### 🔹 Step 2: Install Dependencies
 
 create virtual env - python -m venv venv
+
 Initiate it - venv/Scripts/activate
+
 install - pip install -r requirements.txt
 
 
@@ -46,8 +49,17 @@ streamlit run app.py
 
 ## 🧠 3. Approach
 
-### 📊 Data Understanding
+### 🏗️ Data Preparation
+* Since we do not have any data, we would required some data to traing the model for this we generated synthetic dataset (1000 rows) based on realistic SMS delivery patterns
+* Applied:
 
+  * One-hot encoding for categorical variables
+  * Train-test split with stratification
+
+---
+
+### 📊 Data Understanding
+* Before building the model it is very important to understand the data we are building model on for this we various techniques some of them are: 
 * Explored feature impact using:
 
   * GroupBy analysis
@@ -60,15 +72,6 @@ streamlit run app.py
 
 ---
 
-### 🏗️ Data Preparation
-
-* Generated synthetic dataset (1000 rows) based on realistic SMS delivery patterns
-* Applied:
-
-  * One-hot encoding for categorical variables
-  * Train-test split with stratification
-
----
 
 
 ### Data Pre-processing
@@ -76,7 +79,7 @@ streamlit run app.py
 
 ### 🤖 Model Selection
 
-Tested multiple models:
+Here we have Tested multiple models on our data to find out which model is performing best on our data:
 
 * Logistic Regression (baseline)
 * Random Forest (best performer)
@@ -116,14 +119,14 @@ Tested multiple models:
 * Feature relationships may not fully represent real telecom systems
 * Model performance depends heavily on data quality
 * Long or unrealistic message inputs may not reflect real SMS behavior
-***(imp) The performace of model will not be good because of the data as well as hardware requirenments and time constrainsts.
+* (imp) The performace of model will not be good because of the data as well as hardware requirenments and time constrainsts.
 ---
 
 
 ## 🔥 Future Improvements
 
 * Use real-world SMS logs for better accuracy
-* Add SHAP-based explainability
+* Do multiple things on feature engineering part.
 * Deploy as API using FastAPI, making it scalable, also we can build CI/CD pipelines
 * Enhance UI with analytics dashboard
 
