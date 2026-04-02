@@ -9,6 +9,18 @@ columns = joblib.load("model/columns.pkl")
 st.set_page_config(page_title="SMS Delivery Predictor", layout="centered")
 
 st.title("📩 SMS Delivery Prediction System")
+# Load feature importances (add this once, after loading model)
+try:
+    importances = joblib.load("model/feature_importances.pkl")  # we'll save it
+    st.sidebar.subheader("🔍 Top Feature Importance")
+    imp_df = pd.DataFrame({
+        "Feature": list(importances.keys()),
+        "Importance": list(importances.values())
+    }).sort_values("Importance", ascending=False).head(8)
+    
+    st.sidebar.bar_chart(imp_df.set_index("Feature"))
+except:
+    pass
 st.write("Predict whether your SMS will be delivered successfully.")
 
 # -------------------------------
