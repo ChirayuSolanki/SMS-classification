@@ -59,12 +59,12 @@ streamlit run app.py
 ---
 
 ### 📊 Data Understanding
-* Before building the model it is very important to understand the data we are building model on for this we various techniques some of them are: 
+* Before building the model it is very important to understand the data we are building model on for this we have various techniques some of them are: 
 * Explored feature impact using:
 
   * GroupBy analysis
   * Binning for numerical features
-* Identified key influencing features:
+* After which we need to find which feature are in correlation with the target feature for this we Identified key influencing features like:
 
   * `historical_delivery_rate`
   * `previous_failures`
