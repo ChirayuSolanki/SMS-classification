@@ -27,7 +27,9 @@ cd SMS-classification
 ### 🔹 Step 2: Install Dependencies
 
 create virtual env - python -m venv venv
+
 Initiate it - venv/Scripts/activate
+
 install - pip install -r requirements.txt
 
 
